@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nélia Souza | Creative Portfolio & Tech Lab</title>
+  <meta name="description" content="Explore o portfólio digital de Nélia Souza. Desenvolvimento web premium, design de alta performance e soluções interativas de última geração.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-purple">
+  <!-- Glowing Background Orbs -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="glow-orb orb-3"></div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo" id="navLogo">
+        <span class="logo-accent">&lt;</span>Nélia Souza<span class="logo-accent"> /&gt;</span>
+      </a>
+      
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link active">Início</a>
+        <a href="#projects" class="nav-link">Projetos</a>
+        <a href="#services" class="nav-link">Serviços</a>
+        <a href="#contact" class="nav-link">Contato</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Color Theme Switcher -->
+        <div class="theme-switcher" title="Mudar cor de destaque">
+          <button class="theme-dot active" data-theme="purple" style="--theme-color: #a855f7;"></button>
+          <button class="theme-dot" data-theme="cyan" style="--theme-color: #06b6d4;"></button>
+          <button class="theme-dot" data-theme="emerald" style="--theme-color: #10b981;"></button>
+          <button class="theme-dot" data-theme="rose" style="--theme-color: #f43f5e;"></button>
+        </div>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu de Navegação">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          <span class="badge-text">Disponível para novos projetos</span>
+        </div>
+        <h1 class="hero-title">
+          Criando Experiências Digitais <br>
+          <span class="gradient-text">Extraordinárias</span>
+        </h1>
+        <p class="hero-description">
+          Desenvolvedora Front-End & Designer de Interfaces focada em criar interfaces web premium de alta performance, aliando tecnologia moderna com estética refinada e interações fluidas.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <span>Ver Projetos</span>
+            <i data-lucide="arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Falar Comigo</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Visual Display / Mock Dashboard -->
+      <div class="hero-visual">
+        <div class="glass-card main-dashboard">
+          <div class="card-header">
+            <div class="header-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="card-title">Lab Dashboard // Antigravity</span>
+          </div>
+          <div class="card-body">
+            <div class="stats-grid">
+              <div class="stat-box">
+                <span class="stat-label">Desempenho Vercel</span>
+                <span class="stat-value text-accent" id="perfStat">99%</span>
+                <div class="progress-bar"><div class="progress-fill" style="width: 99%"></div></div>
+              </div>
+              <div class="stat-box">
+                <span class="stat-label">Deploy Automatizado</span>
+                <span class="stat-value status-active">
+                  <span class="pulse-dot"></span>Ativo
+                </span>
+                <span class="stat-subtext">Branch: main</span>
+              </div>
+            </div>
+            
+            <div class="chart-box">
+              <div class="chart-header">
+                <span class="chart-title">Tráfego de Usuários (Simulado)</span>
+                <span class="chart-val" id="visitorCount">1.240</span>
+              </div>
+              <div class="chart-svg-container">
+                <svg viewBox="0 0 300 100" class="chart-svg">
+                  <defs>
+                    <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="var(--accent-rgb-color)" stop-opacity="0.4"/>
+                      <stop offset="100%" stop-color="var(--accent-rgb-color)" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M 0 80 Q 30 50 60 70 T 120 40 T 180 60 T 240 20 T 300 30" fill="none" stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round"></path>
+                  <path d="M 0 80 Q 30 50 60 70 T 120 40 T 180 60 T 240 20 T 300 30 L 300 100 L 0 100 Z" fill="url(#chartGradient)"></path>
+                </svg>
+              </div>
+            </div>
+
+            <div class="info-list">
+              <div class="info-item">
+                <i data-lucide="git-branch" class="text-accent"></i>
+                <span class="info-text">Repo: <strong class="text-white">proj_antigravity</strong></span>
+              </div>
+              <div class="info-item">
+                <i data-lucide="cloud-lightning" class="text-accent"></i>
+                <span class="info-text">Deploy: <strong class="text-white">project-hfq69.vercel.app</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">Meus Projetos</h2>
+        <p class="section-subtitle">Uma seleção de trabalhos desenvolvidos com as tecnologias mais recentes do ecossistema web.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-img-wrapper">
+            <div class="project-glow"></div>
+            <div class="project-img-placeholder" style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(6, 182, 212, 0.2))">
+              <i data-lucide="terminal" class="project-icon"></i>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">HTML5</span>
+              <span class="project-tag">CSS3</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Antigravity Hub</h3>
+            <p class="project-desc">O portal oficial de laboratório, demonstrando animações CSS customizadas, orbs dinâmicas de iluminação e um sistema de temas inovador.</p>
+            <div class="project-links">
+              <a href="https://github.com/neliasouza2601/proj_antigravity" target="_blank" class="project-link-btn">
+                <i data-lucide="github"></i> Código
+              </a>
+              <a href="#" class="project-link-btn primary-link">
+                <i data-lucide="external-link"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-img-wrapper">
+            <div class="project-glow"></div>
+            <div class="project-img-placeholder" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(16, 185, 129, 0.2))">
+              <i data-lucide="layout" class="project-icon"></i>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">Vercel</span>
+              <span class="project-tag">Vite</span>
+              <span class="project-tag">Tailwind</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Dashboard Analytics</h3>
+            <p class="project-desc">Uma interface administrativa responsiva com renderização de gráficos em tempo real, suporte nativo a dark mode e atualizações por WebSockets.</p>
+            <div class="project-links">
+              <a href="#" class="project-link-btn">
+                <i data-lucide="github"></i> Código
+              </a>
+              <a href="#" class="project-link-btn primary-link">
+                <i data-lucide="external-link"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-img-wrapper">
+            <div class="project-glow"></div>
+            <div class="project-img-placeholder" style="background: linear-gradient(135deg, rgba(244, 63, 94, 0.2), rgba(168, 85, 247, 0.2))">
+              <i data-lucide="cpu" class="project-icon"></i>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">API Integration</span>
+              <span class="project-tag">NodeJS</span>
+              <span class="project-tag">REST</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3 class="project-name">Orquestrador Serverless</h3>
+            <p class="project-desc">APIs robustas configuradas em Serverless Functions na Vercel, otimizando requisições, fazendo cache dinâmico e integração com DB.</p>
+            <div class="project-links">
+              <a href="#" class="project-link-btn">
+                <i data-lucide="github"></i> Código
+              </a>
+              <a href="#" class="project-link-btn primary-link">
+                <i data-lucide="external-link"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="section-container">
+      <div class="section-header">
+        <h2 class="section-title">O que eu faço</h2>
+        <p class="section-subtitle">Desenvolvendo pontes entre design sofisticado e código limpo.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon-box">
+            <i data-lucide="code-xml"></i>
+          </div>
+          <h3 class="service-name">Desenvolvimento Front-End</h3>
+          <p class="service-desc">Construção de aplicações web robustas usando as melhores práticas de semântica, performance, SEO e compatibilidade cross-browser.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">
+            <i data-lucide="palette"></i>
+          </div>
+          <h3 class="service-name">UI/UX Design</h3>
+          <p class="service-desc">Concepção de layouts esteticamente impressionantes com foco na usabilidade, criando jornadas intuitivas para o usuário final.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-box">
+            <i data-lucide="gauge"></i>
+          </div>
+          <h3 class="service-name">Otimização de Performance</h3>
+          <p class="service-desc">Auditoria e refatoração de código para obter notas máximas no Lighthouse/Core Web Vitals, reduzindo a latência e acelerando o carregamento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="section-container">
+      <div class="contact-grid">
+        <div class="contact-info-panel">
+          <h2 class="section-title text-left">Vamos criar algo incrível juntos?</h2>
+          <p class="contact-panel-desc">Gostou do meu trabalho? Sinta-se à vontade para entrar em contato. Responderei o mais rápido possível para discutirmos suas ideias.</p>
+          
+          <div class="contact-details">
+            <div class="detail-item">
+              <div class="detail-icon">
+                <i data-lucide="mail"></i>
+              </div>
+              <div class="detail-text">
+                <span class="detail-label">E-mail</span>
+                <a href="mailto:neliasouza2601@gmail.com" class="detail-value">neliasouza2601@gmail.com</a>
+              </div>
+            </div>
+            <div class="detail-item">
+              <div class="detail-icon">
+                <i data-lucide="map-pin"></i>
+              </div>
+              <div class="detail-text">
+                <span class="detail-label">Localização</span>
+                <span class="detail-value">Brasil</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form Card -->
+        <div class="glass-card contact-form-card">
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name" class="form-label">Nome</label>
+              <div class="input-wrapper">
+                <i data-lucide="user" class="input-icon"></i>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Seu nome completo" required>
+              </div>
+              <span class="error-msg" id="nameError">Este campo é obrigatório.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">E-mail</label>
+              <div class="input-wrapper">
+                <i data-lucide="mail" class="input-icon"></i>
+                <input type="email" id="email" name="email" class="form-input" placeholder="seu.email@exemplo.com" required>
+              </div>
+              <span class="error-msg" id="emailError">Insira um e-mail válido.</span>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Mensagem</label>
+              <div class="input-wrapper">
+                <textarea id="message" name="message" class="form-input form-textarea" placeholder="Como posso ajudar você?" required></textarea>
+              </div>
+              <span class="error-msg" id="messageError">Escreva sua mensagem.</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+              <span>Enviar Mensagem</span>
+              <i data-lucide="send"></i>
+            </button>
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="copyright">&copy; <span id="currentYear"></span> Nélia Souza. Todos os direitos reservados.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/neliasouza2601" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
+        <a href="https://vercel.com" target="_blank" aria-label="Vercel"><i data-lucide="triangle"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
