@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // --- HTML ELEMENTS ---
-  // Product gallery & Customizer
-  const mainProductImg = document.getElementById('mainProductImg');
-  const productColorOverlay = document.getElementById('productColorOverlay');
+  // Product gallery & Customizer (Vitrine SVG)
+  const mainSvgBaseColor = document.getElementById('mainSvgBaseColor');
+  const mainSvgTextureOverlay = document.getElementById('mainSvgTextureOverlay');
   const galleryFabricBadge = document.getElementById('galleryFabricBadge');
   const fabricCards = document.querySelectorAll('.fabric-card');
   const fabricLabel = document.getElementById('fabricLabel');
@@ -131,9 +131,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update labels
     if (colorLabel) colorLabel.textContent = colorName;
 
-    // Update main gallery color tint overlay
-    if (productColorOverlay) {
-      productColorOverlay.style.backgroundColor = state.blend;
+    // Update vitrine SVG coloring directly
+    if (mainSvgBaseColor) {
+      mainSvgBaseColor.setAttribute('fill', hex);
     }
 
     // Update fitting room SVG coloring
@@ -200,10 +200,9 @@ document.addEventListener('DOMContentLoaded', () => {
       galleryFabricBadge.textContent = fabricType === 'liso' ? 'Tecido Liso' : 'Tecido Texturizado';
     }
 
-    // Update main image display
-    if (mainProductImg) {
-      const targetSrc = fabricType === 'liso' ? 'assets/regata_lisa.png' : 'assets/regata_textura.png';
-      mainProductImg.src = targetSrc;
+    // Toggle ribbed pattern on vitrine SVG
+    if (mainSvgTextureOverlay) {
+      mainSvgTextureOverlay.style.display = fabricType === 'textura' ? 'block' : 'none';
     }
 
     // Toggle active classes on fabric cards (Vitrine)
@@ -278,9 +277,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Show specific size details or notices
       if (sizeFitAlert) {
-        if (sizeVal === 'GGG' || sizeVal === 'GGGG') {
+        const plusSizes = ['G1', 'G2', 'G3', 'G4'];
+        if (plusSizes.includes(sizeVal)) {
           sizeFitAlert.style.display = 'block';
-          sizeFitAlert.textContent = `O tamanho ${sizeVal} é especialmente modelado com costura dupla lateral reforçada e 4cm a mais de comprimento.`;
+          sizeFitAlert.textContent = `O tamanho ${sizeVal} é especialmente modelado com costura dupla lateral reforçada e ${plusSizes.indexOf(sizeVal) + 3}cm a mais de comprimento.`;
         } else {
           sizeFitAlert.style.display = 'block';
           sizeFitAlert.textContent = 'Modelagem padrão brasileira com alta elasticidade.';
@@ -497,8 +497,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Simple, elegant clothing size estimation logic
-      // Using weight and height ratio to approximate sizing
+      // Clothing size estimation logic (P to G4)
       let resultSize = 'M';
       
       if (weight < 54) {
@@ -509,10 +508,14 @@ document.addEventListener('DOMContentLoaded', () => {
         resultSize = 'G';
       } else if (weight >= 76 && weight < 88) {
         resultSize = 'GG';
-      } else if (weight >= 88 && weight < 104) {
-        resultSize = 'GGG';
+      } else if (weight >= 88 && weight < 98) {
+        resultSize = 'G1';
+      } else if (weight >= 98 && weight < 108) {
+        resultSize = 'G2';
+      } else if (weight >= 108 && weight < 118) {
+        resultSize = 'G3';
       } else {
-        resultSize = 'GGGG';
+        resultSize = 'G4';
       }
 
       recommendedSize.textContent = resultSize;

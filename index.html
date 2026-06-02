@@ -48,7 +48,7 @@
     <div class="hero-inner">
       <div class="hero-info">
         <span class="hero-tag">COLEÇÃO ESSENCIAIS 2026</span>
-        <h1 class="hero-headline">Conforto sem limites, do <span class="serif-italic">P ao GGGG</span></h1>
+        <h1 class="hero-headline">Conforto sem limites, do <span class="serif-italic">P ao G4</span></h1>
         <p class="hero-subline">Peças autorais em algodão nobre liso e textura canelada. Desenhadas para valorizar todas as silhuetas com modelagem impecável e envio para todo o Brasil.</p>
         <div class="hero-cta-group">
           <a href="#store" class="btn btn-dark">Comprar Agora</a>
@@ -70,17 +70,71 @@
         <!-- Interactive Gallery / Product Display -->
         <div class="product-gallery">
           <div class="product-main-view">
-            <!-- Product image display -->
-            <img src="assets/regata_lisa.png" alt="Regata Feminina Lisa" id="mainProductImg" class="main-image">
-            <div class="color-overlay" id="productColorOverlay"></div>
+            <!-- Interactive SVG representation -->
+            <div class="main-product-svg-wrapper">
+              <svg viewBox="0 0 200 240" class="main-product-svg" id="mainProductSvg">
+                <defs>
+                  <!-- Ribbed textured pattern pattern definition -->
+                  <pattern id="mainRibbedPattern" width="6" height="20" patternUnits="userSpaceOnUse">
+                    <line x1="1" y1="0" x2="1" y2="20" stroke="rgba(0,0,0,0.12)" stroke-width="1.5" />
+                    <line x1="4" y1="0" x2="4" y2="20" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+                  </pattern>
+                  <!-- Soft shadow filter for realistic look -->
+                  <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+                    <feDropShadow dx="0" dy="8" stdDeviation="6" flood-opacity="0.15" />
+                  </filter>
+                </defs>
+                <!-- Tank Top Main Silhouette path -->
+                <path d="M 60 20 
+                         C 70 20, 80 30, 100 30 
+                         C 120 30, 130 20, 140 20 
+                         L 155 35 
+                         C 145 60, 138 80, 140 100 
+                         C 142 120, 148 140, 152 180 
+                         C 156 220, 155 230, 155 230 
+                         L 45 230 
+                         C 45 230, 44 220, 48 180 
+                         C 52 140, 58 120, 60 100 
+                         C 62 80, 55 60, 45 35 
+                         Z" 
+                      fill="var(--overlay-color, #f5f5f7)" 
+                      id="mainSvgBaseColor" 
+                      filter="url(#softShadow)" />
+                
+                <!-- Texture overlay path -->
+                <path d="M 60 20 
+                         C 70 20, 80 30, 100 30 
+                         C 120 30, 130 20, 140 20 
+                         L 155 35 
+                         C 145 60, 138 80, 140 100 
+                         C 142 120, 148 140, 152 180 
+                         C 156 220, 155 230, 155 230 
+                         L 45 230 
+                         C 45 230, 44 220, 48 180 
+                         C 52 140, 58 120, 60 100 
+                         C 62 80, 55 60, 45 35 
+                         Z" 
+                      fill="url(#mainRibbedPattern)" 
+                      id="mainSvgTextureOverlay" 
+                      style="display: none; mix-blend-mode: multiply;" />
+
+                <!-- Fold lines/Details of Tank top for realistic depth -->
+                <path d="M 100 30 C 100 60, 95 120, 98 230" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="1.5" />
+                <path d="M 65 35 C 75 70, 72 130, 68 230" fill="none" stroke="rgba(0,0,0,0.04)" stroke-width="1" />
+                <path d="M 135 35 C 125 70, 128 130, 132 230" fill="none" stroke="rgba(0,0,0,0.04)" stroke-width="1" />
+                
+                <!-- Collar fold line -->
+                <path d="M 60 20 C 80 35, 120 35, 140 20" fill="none" stroke="rgba(0,0,0,0.08)" stroke-width="2" />
+              </svg>
+            </div>
             
             <div class="gallery-badge" id="galleryFabricBadge">Tecido Liso</div>
           </div>
           <div class="product-thumbnails">
-            <button class="thumb-btn active" data-img="assets/regata_lisa.png" data-fabric="liso">
+            <button class="thumb-btn active" data-fabric="liso">
               <span>Liso</span>
             </button>
-            <button class="thumb-btn" data-img="assets/regata_textura.png" data-fabric="textura">
+            <button class="thumb-btn" data-fabric="textura">
               <span>Texturizado</span>
             </button>
           </div>
@@ -148,10 +202,12 @@
                 <button class="size-box" data-size="M">M</button>
                 <button class="size-box" data-size="G">G</button>
                 <button class="size-box" data-size="GG">GG</button>
-                <button class="size-box" data-size="GGG">GGG</button>
-                <button class="size-box" data-size="GGGG">GGGG</button>
+                <button class="size-box" data-size="G1">G1</button>
+                <button class="size-box" data-size="G2">G2</button>
+                <button class="size-box" data-size="G3">G3</button>
+                <button class="size-box" data-size="G4">G4</button>
               </div>
-              <p class="size-fit-alert" id="sizeFitAlert">Tamanhos plus size (GGG e GGGG) modelados com reforço lateral e comprimento alongado.</p>
+              <p class="size-fit-alert" id="sizeFitAlert">Tamanhos plus size (G1 ao G4) modelados com reforço lateral e comprimento alongado.</p>
             </div>
 
             <!-- Quantity & Add to Cart -->
@@ -379,7 +435,7 @@
   <div class="modal" id="sizeGuideModal">
     <div class="modal-content glass-card">
       <div class="modal-header">
-        <h3>Tabela de Medidas (P ao GGGG)</h3>
+        <h3>Tabela de Medidas (P ao G4)</h3>
         <button class="close-modal-btn" id="closeModalBtn">&times;</button>
       </div>
       <div class="modal-body">
@@ -425,17 +481,31 @@
                 <td>64</td>
               </tr>
               <tr>
-                <td><strong>GGG (3XL)</strong></td>
-                <td>109 - 118</td>
-                <td>91 - 102</td>
-                <td>117 - 126</td>
+                <td><strong>G1</strong></td>
+                <td>109 - 114</td>
+                <td>91 - 96</td>
+                <td>117 - 122</td>
+                <td>65</td>
+              </tr>
+              <tr>
+                <td><strong>G2</strong></td>
+                <td>115 - 120</td>
+                <td>97 - 102</td>
+                <td>123 - 128</td>
                 <td>66</td>
               </tr>
               <tr>
-                <td><strong>GGGG (4XL)</strong></td>
-                <td>119 - 130</td>
-                <td>103 - 115</td>
-                <td>127 - 138</td>
+                <td><strong>G3</strong></td>
+                <td>121 - 126</td>
+                <td>103 - 108</td>
+                <td>129 - 134</td>
+                <td>67</td>
+              </tr>
+              <tr>
+                <td><strong>G4</strong></td>
+                <td>127 - 132</td>
+                <td>109 - 114</td>
+                <td>135 - 140</td>
                 <td>68</td>
               </tr>
             </tbody>
@@ -482,7 +552,7 @@
       <div class="highlights-grid">
         <div class="highlight-item">
           <i data-lucide="shield-check" class="highlight-icon"></i>
-          <h4>Grade Real do P ao GGGG</h4>
+          <h4>Grade Real do P ao G4</h4>
           <p>Modelagens pensadas ergonomicamente para se ajustar ao corpo feminino de verdade, sem apertar.</p>
         </div>
         <div class="highlight-item">
