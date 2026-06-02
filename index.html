@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nélia Souza | Creative Portfolio & Tech Lab</title>
-  <meta name="description" content="Explore o portfólio digital de Nélia Souza. Desenvolvimento web premium, design de alta performance e soluções interativas de última geração.">
+  <title>Nélia Regatas | Loja e Provador Virtual Premium</title>
+  <meta name="description" content="Compre regatas femininas premium do P ao GGGG. Cores lisas e texturizadas com entrega rápida e Provador Virtual interativo.">
   
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
   
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -17,323 +17,499 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="theme-purple">
-  <!-- Glowing Background Orbs -->
-  <div class="glow-orb orb-1"></div>
-  <div class="glow-orb orb-2"></div>
-  <div class="glow-orb orb-3"></div>
-
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-logo" id="navLogo">
-        <span class="logo-accent">&lt;</span>Nélia Souza<span class="logo-accent"> /&gt;</span>
-      </a>
+  
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="header-container">
+      <a href="#" class="brand-logo">NÉLIA REGATAS</a>
       
-      <nav class="nav-menu" id="navMenu">
-        <a href="#hero" class="nav-link active">Início</a>
-        <a href="#projects" class="nav-link">Projetos</a>
-        <a href="#services" class="nav-link">Serviços</a>
-        <a href="#contact" class="nav-link">Contato</a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#store" class="nav-item">Coleção</a>
+        <a href="#fitting-room" class="nav-item">Provador Virtual</a>
+        <a href="#about" class="nav-item">Diferenciais</a>
+        <a href="#contact" class="nav-item">Atendimento</a>
       </nav>
 
-      <div class="nav-actions">
-        <!-- Color Theme Switcher -->
-        <div class="theme-switcher" title="Mudar cor de destaque">
-          <button class="theme-dot active" data-theme="purple" style="--theme-color: #a855f7;"></button>
-          <button class="theme-dot" data-theme="cyan" style="--theme-color: #06b6d4;"></button>
-          <button class="theme-dot" data-theme="emerald" style="--theme-color: #10b981;"></button>
-          <button class="theme-dot" data-theme="rose" style="--theme-color: #f43f5e;"></button>
+      <div class="header-actions">
+        <div class="cart-btn" id="cartBtn" title="Carrinho">
+          <i data-lucide="shopping-bag"></i>
+          <span class="cart-badge" id="cartBadge">0</span>
         </div>
-        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu de Navegação">
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
           <i data-lucide="menu"></i>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero-section">
-    <div class="hero-container">
-      <div class="hero-content">
-        <div class="badge">
-          <span class="badge-dot"></span>
-          <span class="badge-text">Disponível para novos projetos</span>
-        </div>
-        <h1 class="hero-title">
-          Criando Experiências Digitais <br>
-          <span class="gradient-text">Extraordinárias</span>
-        </h1>
-        <p class="hero-description">
-          Desenvolvedora Front-End & Designer de Interfaces focada em criar interfaces web premium de alta performance, aliando tecnologia moderna com estética refinada e interações fluidas.
-        </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">
-            <span>Ver Projetos</span>
-            <i data-lucide="arrow-right"></i>
-          </a>
-          <a href="#contact" class="btn btn-secondary">
-            <span>Falar Comigo</span>
-          </a>
+  <!-- Hero Slider / Banner -->
+  <section class="hero-banner">
+    <div class="hero-bg-glow"></div>
+    <div class="hero-inner">
+      <div class="hero-info">
+        <span class="hero-tag">COLEÇÃO ESSENCIAIS 2026</span>
+        <h1 class="hero-headline">Conforto sem limites, do <span class="serif-italic">P ao GGGG</span></h1>
+        <p class="hero-subline">Peças autorais em algodão nobre liso e textura canelada. Desenhadas para valorizar todas as silhuetas com modelagem impecável e envio para todo o Brasil.</p>
+        <div class="hero-cta-group">
+          <a href="#store" class="btn btn-dark">Comprar Agora</a>
+          <a href="#fitting-room" class="btn btn-outline">Experimentar no Provador</a>
         </div>
       </div>
-      
-      <!-- Visual Display / Mock Dashboard -->
-      <div class="hero-visual">
-        <div class="glass-card main-dashboard">
-          <div class="card-header">
-            <div class="header-dots">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
-            </div>
-            <span class="card-title">Lab Dashboard // Antigravity</span>
+    </div>
+  </section>
+
+  <!-- Store/Catalog Section -->
+  <section id="store" class="store-section">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="section-subtitle font-alt">Sua Peça Curinga</span>
+        <h2 class="section-title">Regata Feminina Gola Alta</h2>
+      </div>
+
+      <div class="product-grid">
+        <!-- Interactive Gallery / Product Display -->
+        <div class="product-gallery">
+          <div class="product-main-view">
+            <!-- Product image display -->
+            <img src="assets/regata_lisa.png" alt="Regata Feminina Lisa" id="mainProductImg" class="main-image">
+            <div class="color-overlay" id="productColorOverlay"></div>
+            
+            <div class="gallery-badge" id="galleryFabricBadge">Tecido Liso</div>
           </div>
-          <div class="card-body">
-            <div class="stats-grid">
-              <div class="stat-box">
-                <span class="stat-label">Desempenho Vercel</span>
-                <span class="stat-value text-accent" id="perfStat">99%</span>
-                <div class="progress-bar"><div class="progress-fill" style="width: 99%"></div></div>
+          <div class="product-thumbnails">
+            <button class="thumb-btn active" data-img="assets/regata_lisa.png" data-fabric="liso">
+              <span>Liso</span>
+            </button>
+            <button class="thumb-btn" data-img="assets/regata_textura.png" data-fabric="textura">
+              <span>Texturizado</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Customizer / Purchase Options -->
+        <div class="product-details-card">
+          <div class="details-header">
+            <h3 class="product-title" id="productTitle">Regata Gola Alta Essencial</h3>
+            <div class="rating">
+              <div class="stars">
+                <i data-lucide="star" class="fill-star"></i>
+                <i data-lucide="star" class="fill-star"></i>
+                <i data-lucide="star" class="fill-star"></i>
+                <i data-lucide="star" class="fill-star"></i>
+                <i data-lucide="star" class="fill-star"></i>
               </div>
-              <div class="stat-box">
-                <span class="stat-label">Deploy Automatizado</span>
-                <span class="stat-value status-active">
-                  <span class="pulse-dot"></span>Ativo
-                </span>
-                <span class="stat-subtext">Branch: main</span>
+              <span class="reviews-count">(48 avaliações)</span>
+            </div>
+            <div class="price-container">
+              <span class="price-value" id="productPrice">R$ 79,90</span>
+              <span class="price-installments">ou 3x de R$ 26,63 sem juros</span>
+            </div>
+          </div>
+
+          <div class="customizer-options">
+            
+            <!-- Fabric Type Selection -->
+            <div class="option-group">
+              <span class="option-label">Tecido e Acabamento: <strong id="fabricLabel">Algodão Liso</strong></span>
+              <div class="fabric-selector-grid">
+                <label class="fabric-card active" data-fabric="liso">
+                  <input type="radio" name="fabric_type" value="liso" checked class="sr-only">
+                  <span class="fabric-name">Algodão Egípcio Liso</span>
+                  <span class="fabric-desc">Toque ultra macio e acabamento sedoso</span>
+                </label>
+                <label class="fabric-card" data-fabric="textura">
+                  <input type="radio" name="fabric_type" value="textura" class="sr-only">
+                  <span class="fabric-name">Canelado Texturizado</span>
+                  <span class="fabric-desc">Alta elasticidade e textura sofisticada</span>
+                </label>
               </div>
+            </div>
+
+            <!-- Color Selection -->
+            <div class="option-group">
+              <span class="option-label">Cor selecionada: <strong id="colorLabel">Off-White</strong></span>
+              <div class="color-picker-flex">
+                <button class="color-circle active" data-color-name="Off-White" data-hex="#f5f5f7" data-blend="rgba(255, 255, 255, 0.15)" style="background-color: #f5f5f7; border: 1px solid #ccc;" title="Off-White"></button>
+                <button class="color-circle" data-color-name="Preto Clássico" data-hex="#1a1a1a" data-blend="rgba(0, 0, 0, 0.75)" style="background-color: #1a1a1a;" title="Preto Clássico"></button>
+                <button class="color-circle" data-color-name="Terracota" data-hex="#bf6b54" data-blend="rgba(191, 107, 84, 0.6)" style="background-color: #bf6b54;" title="Terracota"></button>
+                <button class="color-circle" data-color-name="Verde Oliva" data-hex="#647355" data-blend="rgba(100, 115, 85, 0.6)" style="background-color: #647355;" title="Verde Oliva"></button>
+                <button class="color-circle" data-color-name="Azul Sereno" data-hex="#8da9bf" data-blend="rgba(141, 169, 191, 0.6)" style="background-color: #8da9bf;" title="Azul Sereno"></button>
+              </div>
+            </div>
+
+            <!-- Size Selection -->
+            <div class="option-group">
+              <div class="size-header-flex">
+                <span class="option-label">Tamanho: <strong id="sizeLabel">M</strong></span>
+                <button class="size-guide-btn" id="sizeGuideBtn"><i data-lucide="ruler"></i> Tabela de Medidas</button>
+              </div>
+              <div class="size-picker-grid">
+                <button class="size-box" data-size="P">P</button>
+                <button class="size-box" data-size="M">M</button>
+                <button class="size-box" data-size="G">G</button>
+                <button class="size-box" data-size="GG">GG</button>
+                <button class="size-box" data-size="GGG">GGG</button>
+                <button class="size-box" data-size="GGGG">GGGG</button>
+              </div>
+              <p class="size-fit-alert" id="sizeFitAlert">Tamanhos plus size (GGG e GGGG) modelados com reforço lateral e comprimento alongado.</p>
+            </div>
+
+            <!-- Quantity & Add to Cart -->
+            <div class="action-row">
+              <div class="qty-selector">
+                <button class="qty-btn" id="qtyMinus" aria-label="Diminuir"><i data-lucide="minus"></i></button>
+                <span class="qty-val" id="qtyVal">1</span>
+                <button class="qty-btn" id="qtyPlus" aria-label="Aumentar"><i data-lucide="plus"></i></button>
+              </div>
+              <button class="btn btn-dark btn-add-cart" id="addToCartBtn">
+                <i data-lucide="shopping-bag"></i> Adicionar ao Carrinho
+              </button>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Freight Calculator -->
+            <div class="shipping-calculator">
+              <span class="shipping-title"><i data-lucide="truck"></i> Calcular Frete e Prazo</span>
+              <p class="shipping-subtitle">Entrega garantida para todo o Brasil</p>
+              <div class="shipping-input-row">
+                <input type="text" id="cepInput" placeholder="00000-000" maxlength="9" class="form-input shipping-input">
+                <button class="btn btn-outline-dark" id="calcShippingBtn">Calcular</button>
+              </div>
+              <span class="error-msg" id="cepError">Por favor, insira um CEP válido.</span>
+              
+              <!-- Shipping Results Container -->
+              <div class="shipping-results" id="shippingResults">
+                <div class="shipping-option">
+                  <div class="option-details">
+                    <span class="option-name">PAC Correios</span>
+                    <span class="option-days" id="pacDays">5 a 8 dias úteis</span>
+                  </div>
+                  <span class="option-cost" id="pacCost">R$ 14,90</span>
+                </div>
+                <div class="shipping-option">
+                  <div class="option-details">
+                    <span class="option-name">SEDEX Expresso</span>
+                    <span class="option-days" id="sedexDays">1 a 3 dias úteis</span>
+                  </div>
+                  <span class="option-cost" id="sedexCost">R$ 27,80</span>
+                </div>
+                <div class="shipping-free-alert" id="freeShippingAlert">
+                  <i data-lucide="check-circle-2"></i> Adicione mais R$ 120,10 para ganhar <strong>Frete Grátis</strong>!
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Virtual Fitting Room Section (Provador Virtual) -->
+  <section id="fitting-room" class="fitting-room-section">
+    <div class="container">
+      <div class="section-title-wrapper text-center">
+        <span class="section-subtitle font-alt">Tecnologia Exclusiva</span>
+        <h2 class="section-title text-white">Provador Virtual Inteligente</h2>
+        <p class="section-desc">Faça upload de uma foto de frente com boa iluminação e veja como a regata veste no seu corpo de forma interativa.</p>
+      </div>
+
+      <div class="fitting-room-card">
+        <!-- Canvas/View Container (Left) -->
+        <div class="fitting-display-panel">
+          <div class="fitting-viewbox">
+            <!-- User photo or silhouette background -->
+            <img src="assets/modelo_silhueta.png" alt="Silhueta Modelo" id="userPhotoBackground" class="background-photo">
+            
+            <!-- Draggable/Scalable Tank Top SVG overlay -->
+            <div class="overlay-clothing-wrapper" id="clothingOverlay">
+              <svg viewBox="0 0 200 240" class="clothing-svg" id="clothingSvg">
+                <defs>
+                  <!-- Ribbed textured pattern pattern definition -->
+                  <pattern id="ribbedPattern" width="6" height="20" patternUnits="userSpaceOnUse">
+                    <line x1="1" y1="0" x2="1" y2="20" stroke="rgba(0,0,0,0.15)" stroke-width="1.5" />
+                    <line x1="4" y1="0" x2="4" y2="20" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+                  </pattern>
+                </defs>
+                <!-- Tank Top Main Silhouette path -->
+                <path d="M 60 20 
+                         C 70 20, 80 30, 100 30 
+                         C 120 30, 130 20, 140 20 
+                         L 155 35 
+                         C 145 60, 138 80, 140 100 
+                         C 142 120, 148 140, 152 180 
+                         C 156 220, 155 230, 155 230 
+                         L 45 230 
+                         C 45 230, 44 220, 48 180 
+                         C 52 140, 58 120, 60 100 
+                         C 62 80, 55 60, 45 35 
+                         Z" 
+                      fill="var(--overlay-color, #f5f5f7)" 
+                      id="svgBaseColor" />
+                
+                <!-- Texture overlay path (only active when 'textura' is selected) -->
+                <path d="M 60 20 
+                         C 70 20, 80 30, 100 30 
+                         C 120 30, 130 20, 140 20 
+                         L 155 35 
+                         C 145 60, 138 80, 140 100 
+                         C 142 120, 148 140, 152 180 
+                         C 156 220, 155 230, 155 230 
+                         L 45 230 
+                         C 45 230, 44 220, 48 180 
+                         C 52 140, 58 120, 60 100 
+                         C 62 80, 55 60, 45 35 
+                         Z" 
+                      fill="url(#ribbedPattern)" 
+                      id="svgTextureOverlay" 
+                      style="display: none; mix-blend-mode: multiply;" />
+
+                <!-- Fold lines/Details of Tank top for realistic depth -->
+                <path d="M 100 30 C 100 60, 95 120, 98 230" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="1.5" />
+                <path d="M 65 35 C 75 70, 72 130, 68 230" fill="none" stroke="rgba(0,0,0,0.04)" stroke-width="1" />
+                <path d="M 135 35 C 125 70, 128 130, 132 230" fill="none" stroke="rgba(0,0,0,0.04)" stroke-width="1" />
+                
+                <!-- Collar fold line -->
+                <path d="M 60 20 C 80 35, 120 35, 140 20" fill="none" stroke="rgba(0,0,0,0.08)" stroke-width="2" />
+              </svg>
             </div>
             
-            <div class="chart-box">
-              <div class="chart-header">
-                <span class="chart-title">Tráfego de Usuários (Simulado)</span>
-                <span class="chart-val" id="visitorCount">1.240</span>
-              </div>
-              <div class="chart-svg-container">
-                <svg viewBox="0 0 300 100" class="chart-svg">
-                  <defs>
-                    <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stop-color="var(--accent-rgb-color)" stop-opacity="0.4"/>
-                      <stop offset="100%" stop-color="var(--accent-rgb-color)" stop-opacity="0"/>
-                    </linearGradient>
-                  </defs>
-                  <path d="M 0 80 Q 30 50 60 70 T 120 40 T 180 60 T 240 20 T 300 30" fill="none" stroke="var(--accent-color)" stroke-width="3" stroke-linecap="round"></path>
-                  <path d="M 0 80 Q 30 50 60 70 T 120 40 T 180 60 T 240 20 T 300 30 L 300 100 L 0 100 Z" fill="url(#chartGradient)"></path>
-                </svg>
-              </div>
-            </div>
-
-            <div class="info-list">
-              <div class="info-item">
-                <i data-lucide="git-branch" class="text-accent"></i>
-                <span class="info-text">Repo: <strong class="text-white">proj_antigravity</strong></span>
-              </div>
-              <div class="info-item">
-                <i data-lucide="cloud-lightning" class="text-accent"></i>
-                <span class="info-text">Deploy: <strong class="text-white">project-hfq69.vercel.app</strong></span>
-              </div>
-            </div>
+            <!-- Fitting status label -->
+            <div class="fitting-loading-status" id="fittingLoading"><i data-lucide="loader-2" class="animate-spin"></i> Processando Imagem...</div>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="projects-section">
-    <div class="section-container">
-      <div class="section-header">
-        <h2 class="section-title">Meus Projetos</h2>
-        <p class="section-subtitle">Uma seleção de trabalhos desenvolvidos com as tecnologias mais recentes do ecossistema web.</p>
-      </div>
-
-      <div class="projects-grid">
-        <!-- Project 1 -->
-        <div class="project-card">
-          <div class="project-img-wrapper">
-            <div class="project-glow"></div>
-            <div class="project-img-placeholder" style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(6, 182, 212, 0.2))">
-              <i data-lucide="terminal" class="project-icon"></i>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">HTML5</span>
-              <span class="project-tag">CSS3</span>
-              <span class="project-tag">JavaScript</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3 class="project-name">Antigravity Hub</h3>
-            <p class="project-desc">O portal oficial de laboratório, demonstrando animações CSS customizadas, orbs dinâmicas de iluminação e um sistema de temas inovador.</p>
-            <div class="project-links">
-              <a href="https://github.com/neliasouza2601/proj_antigravity" target="_blank" class="project-link-btn">
-                <i data-lucide="github"></i> Código
-              </a>
-              <a href="#" class="project-link-btn primary-link">
-                <i data-lucide="external-link"></i> Live Demo
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="project-card">
-          <div class="project-img-wrapper">
-            <div class="project-glow"></div>
-            <div class="project-img-placeholder" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(16, 185, 129, 0.2))">
-              <i data-lucide="layout" class="project-icon"></i>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">Vercel</span>
-              <span class="project-tag">Vite</span>
-              <span class="project-tag">Tailwind</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3 class="project-name">Dashboard Analytics</h3>
-            <p class="project-desc">Uma interface administrativa responsiva com renderização de gráficos em tempo real, suporte nativo a dark mode e atualizações por WebSockets.</p>
-            <div class="project-links">
-              <a href="#" class="project-link-btn">
-                <i data-lucide="github"></i> Código
-              </a>
-              <a href="#" class="project-link-btn primary-link">
-                <i data-lucide="external-link"></i> Live Demo
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="project-card">
-          <div class="project-img-wrapper">
-            <div class="project-glow"></div>
-            <div class="project-img-placeholder" style="background: linear-gradient(135deg, rgba(244, 63, 94, 0.2), rgba(168, 85, 247, 0.2))">
-              <i data-lucide="cpu" class="project-icon"></i>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">API Integration</span>
-              <span class="project-tag">NodeJS</span>
-              <span class="project-tag">REST</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3 class="project-name">Orquestrador Serverless</h3>
-            <p class="project-desc">APIs robustas configuradas em Serverless Functions na Vercel, otimizando requisições, fazendo cache dinâmico e integração com DB.</p>
-            <div class="project-links">
-              <a href="#" class="project-link-btn">
-                <i data-lucide="github"></i> Código
-              </a>
-              <a href="#" class="project-link-btn primary-link">
-                <i data-lucide="external-link"></i> Live Demo
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="services-section">
-    <div class="section-container">
-      <div class="section-header">
-        <h2 class="section-title">O que eu faço</h2>
-        <p class="section-subtitle">Desenvolvendo pontes entre design sofisticado e código limpo.</p>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon-box">
-            <i data-lucide="code-xml"></i>
-          </div>
-          <h3 class="service-name">Desenvolvimento Front-End</h3>
-          <p class="service-desc">Construção de aplicações web robustas usando as melhores práticas de semântica, performance, SEO e compatibilidade cross-browser.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon-box">
-            <i data-lucide="palette"></i>
-          </div>
-          <h3 class="service-name">UI/UX Design</h3>
-          <p class="service-desc">Concepção de layouts esteticamente impressionantes com foco na usabilidade, criando jornadas intuitivas para o usuário final.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon-box">
-            <i data-lucide="gauge"></i>
-          </div>
-          <h3 class="service-name">Otimização de Performance</h3>
-          <p class="service-desc">Auditoria e refatoração de código para obter notas máximas no Lighthouse/Core Web Vitals, reduzindo a latência e acelerando o carregamento.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact-section">
-    <div class="section-container">
-      <div class="contact-grid">
-        <div class="contact-info-panel">
-          <h2 class="section-title text-left">Vamos criar algo incrível juntos?</h2>
-          <p class="contact-panel-desc">Gostou do meu trabalho? Sinta-se à vontade para entrar em contato. Responderei o mais rápido possível para discutirmos suas ideias.</p>
           
-          <div class="contact-details">
-            <div class="detail-item">
-              <div class="detail-icon">
-                <i data-lucide="mail"></i>
+          <!-- Virtual adjustment control sliders -->
+          <div class="fitting-adjustment-controls">
+            <span class="control-section-title"><i data-lucide="sliders"></i> Ajuste Fino da Regata</span>
+            <div class="control-grid">
+              <div class="slider-group">
+                <label for="sliderScale" class="slider-label">Tamanho / Escala: <span id="valScale">100%</span></label>
+                <input type="range" id="sliderScale" min="50" max="170" value="100" class="fitting-slider">
               </div>
-              <div class="detail-text">
-                <span class="detail-label">E-mail</span>
-                <a href="mailto:neliasouza2601@gmail.com" class="detail-value">neliasouza2601@gmail.com</a>
+              <div class="slider-group">
+                <label for="sliderX" class="slider-label">Posição Horizontal (X): <span id="valX">0px</span></label>
+                <input type="range" id="sliderX" min="-120" max="120" value="0" class="fitting-slider">
+              </div>
+              <div class="slider-group">
+                <label for="sliderY" class="slider-label">Posição Vertical (Y): <span id="valY">0px</span></label>
+                <input type="range" id="sliderY" min="-120" max="120" value="0" class="fitting-slider">
+              </div>
+              <div class="slider-group">
+                <label for="sliderRotate" class="slider-label">Rotação / Ângulo: <span id="valRotate">0°</span></label>
+                <input type="range" id="sliderRotate" min="-30" max="30" value="0" class="fitting-slider">
               </div>
             </div>
-            <div class="detail-item">
-              <div class="detail-icon">
-                <i data-lucide="map-pin"></i>
+            <button class="btn btn-outline-light btn-sm btn-reset" id="resetFittingControlsBtn">
+              <i data-lucide="refresh-cw"></i> Resetar Ajustes
+            </button>
+          </div>
+        </div>
+
+        <!-- Controls/Upload Panel (Right) -->
+        <div class="fitting-options-panel">
+          <div class="instruction-box">
+            <h4 class="instruction-title">Como usar o Provador Virtual:</h4>
+            <ol class="instruction-list">
+              <li>Selecione a <strong>cor</strong> e o <strong>tecido</strong> da regata na vitrine ou diretamente nos seletores abaixo.</li>
+              <li>Envie uma foto sua de corpo inteiro ou meio corpo, de frente, com fundo neutro.</li>
+              <li>Use os controles deslizantes de ajuste fino para enquadrar perfeitamente a blusa no seu corpo.</li>
+            </ol>
+          </div>
+
+          <div class="upload-zone" id="uploadZone">
+            <input type="file" id="photoUploadInput" accept="image/*" class="sr-only">
+            <i data-lucide="image" class="upload-icon"></i>
+            <span class="upload-text">Arraste sua foto aqui ou</span>
+            <button class="btn btn-outline-dark btn-sm btn-upload" id="triggerUploadBtn">Escolher Arquivo</button>
+            <span class="upload-hint">Formatos suportados: JPG, PNG. Sua foto não é enviada ao servidor, o processamento é local e seguro.</span>
+          </div>
+          
+          <!-- Sync customizer controls directly inside the fitting room -->
+          <div class="fitting-sync-settings">
+            <span class="panel-subtitle">Personalização Rápida no Provador</span>
+            
+            <div class="option-row-flex">
+              <div class="mini-control">
+                <span class="mini-label">Cor da Regata:</span>
+                <div class="color-picker-flex mini">
+                  <button class="color-circle active" data-sync="color" data-color-name="Off-White" data-hex="#f5f5f7" style="background-color: #f5f5f7; border: 1px solid #ccc;"></button>
+                  <button class="color-circle" data-sync="color" data-color-name="Preto Clássico" data-hex="#1a1a1a" style="background-color: #1a1a1a;"></button>
+                  <button class="color-circle" data-sync="color" data-color-name="Terracota" data-hex="#bf6b54" style="background-color: #bf6b54;"></button>
+                  <button class="color-circle" data-sync="color" data-color-name="Verde Oliva" data-hex="#647355" style="background-color: #647355;"></button>
+                  <button class="color-circle" data-sync="color" data-color-name="Azul Sereno" data-hex="#8da9bf" style="background-color: #8da9bf;"></button>
+                </div>
               </div>
-              <div class="detail-text">
-                <span class="detail-label">Localização</span>
-                <span class="detail-value">Brasil</span>
+
+              <div class="mini-control">
+                <span class="mini-label">Textura:</span>
+                <div class="toggle-buttons-mini">
+                  <button class="toggle-mini-btn active" data-sync="fabric" data-fabric="liso">Lisa</button>
+                  <button class="toggle-mini-btn" data-sync="fabric" data-fabric="textura">Canelada</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Smart size advisor tool -->
+            <div class="size-advisor-box">
+              <span class="advisor-title"><i data-lucide="sparkles"></i> Recomendador Inteligente de Tamanho</span>
+              <p class="advisor-desc">Preencha sua altura e peso para recomendarmos o tamanho ideal.</p>
+              <div class="advisor-inputs">
+                <div class="adv-group">
+                  <label for="advHeight">Altura (cm)</label>
+                  <input type="number" id="advHeight" placeholder="Ex: 165" class="form-input adv-input">
+                </div>
+                <div class="adv-group">
+                  <label for="advWeight">Peso (kg)</label>
+                  <input type="number" id="advWeight" placeholder="Ex: 68" class="form-input adv-input">
+                </div>
+                <button class="btn btn-dark btn-sm btn-advise" id="btnAdvise">Calcular</button>
+              </div>
+              <div class="advisor-result" id="advisorResult">
+                <i data-lucide="info"></i> Com base nas medidas, recomendamos o tamanho <strong id="recommendedSize">GG</strong> para uma vestibilidade confortável.
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Contact Form Card -->
-        <div class="glass-card contact-form-card">
-          <form id="contactForm" class="contact-form" novalidate>
-            <div class="form-group">
-              <label for="name" class="form-label">Nome</label>
-              <div class="input-wrapper">
-                <i data-lucide="user" class="input-icon"></i>
-                <input type="text" id="name" name="name" class="form-input" placeholder="Seu nome completo" required>
-              </div>
-              <span class="error-msg" id="nameError">Este campo é obrigatório.</span>
-            </div>
-
-            <div class="form-group">
-              <label for="email" class="form-label">E-mail</label>
-              <div class="input-wrapper">
-                <i data-lucide="mail" class="input-icon"></i>
-                <input type="email" id="email" name="email" class="form-input" placeholder="seu.email@exemplo.com" required>
-              </div>
-              <span class="error-msg" id="emailError">Insira um e-mail válido.</span>
-            </div>
-
-            <div class="form-group">
-              <label for="message" class="form-label">Mensagem</label>
-              <div class="input-wrapper">
-                <textarea id="message" name="message" class="form-input form-textarea" placeholder="Como posso ajudar você?" required></textarea>
-              </div>
-              <span class="error-msg" id="messageError">Escreva sua mensagem.</span>
-            </div>
-
-            <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
-              <span>Enviar Mensagem</span>
-              <i data-lucide="send"></i>
-            </button>
-            <div class="form-status" id="formStatus"></div>
-          </form>
+  <!-- Size Chart Drawer Modal -->
+  <div class="modal" id="sizeGuideModal">
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <h3>Tabela de Medidas (P ao GGGG)</h3>
+        <button class="close-modal-btn" id="closeModalBtn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">Compare suas medidas com nossa tabela para escolher a regata perfeita. Nossas peças possuem excelente elastano.</p>
+        <div class="table-wrapper">
+          <table class="size-table">
+            <thead>
+              <tr>
+                <th>Tamanho</th>
+                <th>Busto (cm)</th>
+                <th>Cintura (cm)</th>
+                <th>Quadril (cm)</th>
+                <th>Comprimento (cm)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>P</strong></td>
+                <td>80 - 86</td>
+                <td>62 - 68</td>
+                <td>88 - 94</td>
+                <td>58</td>
+              </tr>
+              <tr>
+                <td><strong>M</strong></td>
+                <td>87 - 93</td>
+                <td>69 - 75</td>
+                <td>95 - 101</td>
+                <td>60</td>
+              </tr>
+              <tr>
+                <td><strong>G</strong></td>
+                <td>94 - 100</td>
+                <td>76 - 82</td>
+                <td>102 - 108</td>
+                <td>62</td>
+              </tr>
+              <tr>
+                <td><strong>GG</strong></td>
+                <td>101 - 108</td>
+                <td>83 - 90</td>
+                <td>109 - 116</td>
+                <td>64</td>
+              </tr>
+              <tr>
+                <td><strong>GGG (3XL)</strong></td>
+                <td>109 - 118</td>
+                <td>91 - 102</td>
+                <td>117 - 126</td>
+                <td>66</td>
+              </tr>
+              <tr>
+                <td><strong>GGGG (4XL)</strong></td>
+                <td>119 - 130</td>
+                <td>103 - 115</td>
+                <td>127 - 138</td>
+                <td>68</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shopping Cart Sidebar Drawer -->
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-sidebar-header">
+      <h3>Seu Carrinho</h3>
+      <button class="close-cart-btn" id="closeCartBtn"><i data-lucide="x"></i></button>
+    </div>
+    <div class="cart-sidebar-body" id="cartItemsContainer">
+      <div class="cart-empty-state">
+        <i data-lucide="shopping-basket" class="empty-icon"></i>
+        <p>Seu carrinho está vazio.</p>
+      </div>
+    </div>
+    <div class="cart-sidebar-footer" id="cartFooter" style="display: none;">
+      <div class="cart-summary-row">
+        <span>Subtotal:</span>
+        <strong id="cartSubtotal">R$ 0,00</strong>
+      </div>
+      <div class="cart-summary-row">
+        <span>Frete:</span>
+        <span id="cartShippingText">Calcular na vitrine</span>
+      </div>
+      <div class="cart-summary-row total">
+        <span>Total:</span>
+        <strong id="cartTotal">R$ 0,00</strong>
+      </div>
+      <button class="btn btn-dark btn-block btn-checkout" id="checkoutBtn">Finalizar Compra</button>
+    </div>
+  </div>
+  
+  <div class="overlay-backdrop" id="overlayBackdrop"></div>
+
+  <!-- Highlights / Brand Values -->
+  <section id="about" class="highlights-section">
+    <div class="container">
+      <div class="highlights-grid">
+        <div class="highlight-item">
+          <i data-lucide="shield-check" class="highlight-icon"></i>
+          <h4>Grade Real do P ao GGGG</h4>
+          <p>Modelagens pensadas ergonomicamente para se ajustar ao corpo feminino de verdade, sem apertar.</p>
+        </div>
+        <div class="highlight-item">
+          <i data-lucide="package-open" class="highlight-icon"></i>
+          <h4>Entrega em Todo o Brasil</h4>
+          <p>Parceria direta com transportadoras e Correios garantindo agilidade e frete justo em todos os estados.</p>
+        </div>
+        <div class="highlight-item">
+          <i data-lucide="arrow-left-right" class="highlight-icon"></i>
+          <h4>Primeira Troca Grátis</h4>
+          <p>Se a regata não servir como esperado, a primeira troca é totalmente por nossa conta dentro de 7 dias.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter / Contact Contact Form -->
+  <section id="contact" class="newsletter-section">
+    <div class="container mini-container">
+      <div class="newsletter-card glass-card">
+        <h3>Fique por dentro das novidades</h3>
+        <p>Inscreva-se na nossa newsletter para receber alertas de reposição, novos tecidos e descontos exclusivos em primeira mão.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Seu melhor e-mail" required class="form-input newsletter-input">
+          <button type="submit" class="btn btn-dark">Cadastrar</button>
+        </form>
+        <div id="newsletterStatus" class="form-status"></div>
       </div>
     </div>
   </section>
@@ -341,10 +517,13 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
-      <p class="copyright">&copy; <span id="currentYear"></span> Nélia Souza. Todos os direitos reservados.</p>
-      <div class="footer-socials">
-        <a href="https://github.com/neliasouza2601" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
-        <a href="https://vercel.com" target="_blank" aria-label="Vercel"><i data-lucide="triangle"></i></a>
+      <div class="footer-brand-section">
+        <h4 class="footer-brand">NÉLIA REGATAS</h4>
+        <p class="footer-tagline">Moda inclusiva de alta performance e tecnologia de vestir.</p>
+      </div>
+      <div class="footer-bottom">
+        <p class="copyright">&copy; <span id="currentYear"></span> Nélia Regatas. Todos os direitos reservados.</p>
+        <p class="developer-info">Desenvolvido por Antigravity AI</p>
       </div>
     </div>
   </footer>
